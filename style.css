@@ -1,4 +1,4 @@
-ody {
+body {
   font-family: Arial, sans-serif;
   color: #333;
   background-color: #e63bc1;
@@ -8,7 +8,7 @@ ody {
 }
 
 header {
-  background-color: #4caf9b;
+  background-color: #530253;
   color: white;
   padding: 20px;
   text-align: center;
@@ -73,3 +73,5 @@ main a {
   color: #ff22e9;
   font-weight: bold;
 }
+ 
+

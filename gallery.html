@@ -46,32 +46,65 @@
             font-weight: bold;
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 900px;
+        .pinterest-grid {
+            column-count: 4;
+            column-gap: 18px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .gallery-card {
-            background: #f4d7ee;
+        .pin {
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 18px;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            text-decoration: none;
+        }
+
+        .pin-card {
+            position: relative;
             border: 2px solid #d5a65c;
-            border-radius: 4px;
+            border-radius: 8px;
             overflow: hidden;
-            height: 170px;
+            background: #fff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .pin-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .pin-card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .pin-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(44, 0, 88, 0.35);
+            opacity: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: opacity 0.25s ease;
         }
 
-        .gallery-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .pin-card:hover .pin-overlay {
+            opacity: 1;
+        }
+
+        .pin-overlay span {
+            color: #fff;
+            background: rgba(44, 0, 88, 0.85);
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-weight: bold;
         }
 
         footer {
@@ -80,6 +113,24 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .pinterest-grid {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pinterest-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .pinterest-grid {
+                column-count: 1;
+            }
         }
     </style>
 </head>
@@ -98,7 +149,6 @@
                     <li class="nav-item"><a class="nav-link" href="healing and empowerment.html">Healing</a></li>
                     <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                 </ul>
             </div>
         </div>
@@ -110,62 +160,246 @@
         <div class="container">
             <h1>Gallery</h1>
 
-            <div class="gallery-grid">
-                <div class="gallery-card"><img src="7 rings.jpg" alt="7 rings"></div>
-                <div class="gallery-card"><img src="Jeremiah.jpg" alt="Jeremiah"></div>
-                <div class="gallery-card"><img src="Master.jpg" alt="Master"></div>
-                <div class="gallery-card"><img src="believe in yourself.jpg" alt="Believe in yourself"></div>
-                <div class="gallery-card"><img src="celebrate yourself.jpg" alt="Celebrate yourself"></div>
-                <div class="gallery-card"><img src="character vs wealth.jpg" alt="Character vs wealth"></div>
-                <div class="gallery-card"><img src="cherries.jpg" alt="Cherries"></div>
-                <div class="gallery-card"><img src="daily affirmations.jpg" alt="Daily affirmations"></div>
-                <div class="gallery-card"><img src="deserve.jpg" alt="Deserve"></div>
-                <div class="gallery-card"><img src="favor.jpg" alt="Favor"></div>
-                <div class="gallery-card"><img src="donkey and lion.jpg" alt="Donkey and lion"></div>
-                <div class="gallery-card"><img src="dreaming.jpg" alt="Dreaming"></div>
-                <div class="gallery-card"><img src="faith.jpg" alt="Faith"></div>
-                <div class="gallery-card"><img src="healing art.jpg" alt="Healing art"></div>
-                <div class="gallery-card"><img src="healing grace.jpg" alt="Healing grace"></div>
-                <div class="gallery-card"><img src="i rise.jpg" alt="I rise"></div>
-                <div class="gallery-card"><img src="isaiah.jpg" alt="Isaiah"></div>
-                <div class="gallery-card"><img src="loving yourself.jpg" alt="Loving yourself"></div>
-                <div class="gallery-card"><img src="negativity.jpg" alt="Negativity"></div>
-                <div class="gallery-card"><img src="no competition.jpg" alt="No competition"></div>
-                <div class="gallery-card"><img src="old hands.jpg" alt="Old hands"></div>
-                <div class="gallery-card"><img src="she is.jpg" alt="She is"></div>
-                <div class="gallery-card"><img src="path.jpg" alt="Path"></div>
-                <div class="gallery-card"><img src="priority.jpg" alt="Priority"></div>
-                <div class="gallery-card"><img src="queen.jpg" alt="Queen"></div>
-                <div class="gallery-card"><img src="remember who you wanted to be.jpg" alt="Remember who you wanted to be"></div>
-                <div class="gallery-card"><img src="resilience.jpg" alt="Resilience"></div>
-                <div class="gallery-card"><img src="rock lifting.jpg" alt="Rock lifting"></div>
-                <div class="gallery-card"><img src="stickers.jpg" alt="Stickers"></div>
-                <div class="gallery-card"><img src="winning.jpg" alt="Winning"></div>
-                <div class="gallery-card"><img src="wisdom.jpg" alt="Wisdom"></div>
-                <div class="gallery-card"><img src="working out.jpg" alt="Working out"></div>
-                <div class="gallery-card"><img src="you vs you.jpg" alt="You vs you"></div>
+            <div class="pinterest-grid">
+                <a class="pin" href="7 rings.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="7 rings.jpg" alt="7 rings">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="Jeremiah.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="Jeremiah.jpg" alt="Jeremiah">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="Master.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="Master.jpg" alt="Master">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="believe in yourself.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="believe in yourself.jpg" alt="Believe in yourself">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="celebrate yourself.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="celebrate yourself.jpg" alt="Celebrate yourself">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="character vs wealth.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="character vs wealth.jpg" alt="Character vs wealth">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="cherries.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="cherries.jpg" alt="Cherries">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="daily affirmations.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="daily affirmations.jpg" alt="Daily affirmations">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="deserve.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="deserve.jpg" alt="Deserve">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="favor.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="favor.jpg" alt="Favor">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="donkey and lion.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="donkey and lion.jpg" alt="Donkey and lion">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="dreaming.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="dreaming.jpg" alt="Dreaming">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="faith.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="faith.jpg" alt="Faith">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="healing art.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="healing art.jpg" alt="Healing art">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="healing grace.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="healing grace.jpg" alt="Healing grace">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="i rise.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="i rise.jpg" alt="I rise">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="isaiah.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="isaiah.jpg" alt="Isaiah">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="loving yourself.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="loving yourself.jpg" alt="Loving yourself">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="negativity.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="negativity.jpg" alt="Negativity">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="no competition.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="no competition.jpg" alt="No competition">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="old hands.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="old hands.jpg" alt="Old hands">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="she is.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="she is.jpg" alt="She is">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="path.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="path.jpg" alt="Path">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="priority.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="priority.jpg" alt="Priority">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="queen.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="queen.jpg" alt="Queen">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="remember who you wanted to be.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="remember who you wanted to be.jpg" alt="Remember who you wanted to be">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="resilience.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="resilience.jpg" alt="Resilience">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="rock lifting.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="rock lifting.jpg" alt="Rock lifting">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="stickers.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="stickers.jpg" alt="Stickers">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="winning.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="winning.jpg" alt="Winning">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="wisdom.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="wisdom.jpg" alt="Wisdom">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="working out.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="working out.jpg" alt="Working out">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
+
+                <a class="pin" href="you vs you.jpg" target="_blank">
+                    <div class="pin-card">
+                        <img src="you vs you.jpg" alt="You vs you">
+                        <div class="pin-overlay"><span>Open</span></div>
+                    </div>
+                </a>
             </div>
         </div>
-    </section>                 
-    <footer>
-        <p>&copy;2026 CROWN YOURSELF. All rights reserved</p>
-    </footer>
-   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelectorAll('.navbar a');
-    const navMenu = document.querySelector('.navbar ul');
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
-    // Close menu when a navigation link is clicked
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('show');
-      });
-    });
-  </script>
-</body>       
-</html>
+    </section>
+</main>
 
-        
+<footer>
+    <p>&copy; 2026 Crown Yourself. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+    </html>

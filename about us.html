@@ -12,32 +12,26 @@
             font-family: Arial, sans-serif;
             background: #f7dff3;
         }
-
         .navbar-custom {
             background: #2c0058;
             padding: 15px 0;
         }
-
         .navbar-brand {
             color: #f6c45f !important;
             font-weight: bold;
             letter-spacing: 1px;
         }
-
         .nav-link {
             color: #fff !important;
             margin-left: 20px;
         }
-
         .nav-link:hover {
             color: #f6c45f !important;
         }
-
         .page-section {
             padding: 70px 0 60px;
             text-align: center;
         }
-
         .page-section h2 {
             font-family: Georgia, serif;
             color: #2c0058;
@@ -45,64 +39,26 @@
             margin-bottom: 30px;
             font-weight: bold;
         }
-
-        .intro-text {
+        .page-section h4 {
+            color: #2c0058;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .card-box {
+            background: rgba(255,255,255,0.45);
+            border: 2px solid #d5a65c;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+        .page-section p {
             color: #2c0058;
             font-size: 1.05rem;
             line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto 30px;
         }
-
-        .info-box {
-            max-width: 900px;
-            margin: 18px auto;
-            border: 2px solid #d5a65c;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.5);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            overflow: hidden;
-            text-align: left;
-        }
-
-        .info-toggle {
-            width: 100%;
-            background: transparent;
-            border: none;
-            padding: 18px 22px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2c0058;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .info-toggle:hover {
-            background: rgba(255,255,255,0.35);
-        }
-
-        .info-content {
-            display: none;
-            padding: 0 22px 18px;
-            color: #2c0058;
-            line-height: 1.8;
-        }
-
-        .info-box.open .info-content {
-            display: block;
-        }
-
-        .info-box.open .arrow {
-            transform: rotate(180deg);
-        }
-
-        .arrow {
-            transition: transform 0.25s ease;
-            font-size: 1rem;
-        }
-
         footer {
             background: #2c0058;
             color: white;
@@ -137,44 +93,29 @@
     <main class="page-section">
         <div class="container">
             <h2>About Crown Yourself</h2>
-            <p class="intro-text">
+            <p>
                 Crown Yourself is a self-empowerment and healing platform designed to help individuals embrace emotional wellness, confidence, and self-love.
             </p>
 
-            <div class="info-box">
-                <button class="info-toggle" type="button">
-                    <span>MISSION</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="info-content">
-                    <p>
-                        Our mission is to inspire self-empowerment and emotional healing by providing a calm, supportive space that encourages self-reflection, self-love, and personal growth. Crown Yourself aims to remind individuals of their worth and support them as they heal and grow at their own pace.
-                    </p>
-                </div>
+            <h4>MISSION</h4>
+            <div class="card-box">
+                <p>
+                    Our mission is to inspire self-empowerment and emotional healing by providing a calm, supportive space that encourages self-reflection, self-love, and personal growth. Crown Yourself aims to remind individuals of their worth and support them as they heal and grow at their own pace.
+                </p>
             </div>
 
-            <div class="info-box">
-                <button class="info-toggle" type="button">
-                    <span>VISION</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="info-content">
-                    <p>
-                        Our vision is a world where individuals confidently embrace their inner strength, prioritise their well-being, and live with purpose. Crown Yourself envisions becoming a trusted digital sanctuary for healing, empowerment, and self-discovery.
-                    </p>
-                </div>
+            <h4>VISION</h4>
+            <div class="card-box">
+                <p>
+                    Our vision is a world where individuals confidently embrace their inner strength, prioritise their well-being, and live with purpose. Crown Yourself envisions becoming a trusted digital sanctuary for healing, empowerment, and self-discovery.
+                </p>
             </div>
 
-            <div class="info-box">
-                <button class="info-toggle" type="button">
-                    <span>OUR STORY</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="info-content">
-                    <p>
-                        Crown Yourself was created as a safe space for healing, self-empowerment, and personal growth. It is built on the belief that every individual deserves to feel worthy, confident, and whole. The platform encourages reflection, affirmation, and compassionate self-care, supporting people as they reconnect with their inner strength and heal at their own pace. Crown Yourself is not about perfection, but about progress and self-acceptance. Here, choosing yourself is an act of courage — and recognising your worth is the beginning of true empowerment.
-                    </p>
-                </div>
+            <h4>OUR STORY</h4>
+            <div class="card-box">
+                <p>
+                    Crown Yourself was created as a safe space for healing, self-empowerment, and personal growth. It is built on the belief that every individual deserves to feel worthy, confident, and whole. The platform encourages reflection, affirmation, and compassionate self-care, supporting people as they reconnect with their inner strength and heal at their own pace. Crown Yourself is not about perfection, but about progress and self-acceptance. Here, choosing yourself is an act of courage — and recognising your worth is the beginning of true empowerment.
+                </p>
             </div>
         </div>
     </main>
@@ -184,13 +125,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.querySelectorAll('.info-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const box = button.parentElement;
-                box.classList.toggle('open');
-            });
-        });
-    </script>
 </body>
 </html>

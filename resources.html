@@ -3,76 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESOURCES</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <title>RESOURCES - Crown Yourself</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7dff3;
+        }
+
+        .navbar-custom {
+            background: #2c0058;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #f6c45f !important;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            margin-left: 20px;
+        }
+
+        .nav-link:hover {
+            color: #f6c45f !important;
+        }
+
+        .page-section {
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            color: #2c0058;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            color: #2c0058;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 25px;
+        }
+
+        .card-box {
+            max-width: 900px;
+            margin: 18px auto;
+            border: 2px solid #d5a65c;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.5);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: left;
+            padding: 18px 22px;
+            color: #2c0058;
+        }
+
+        .card-box h4 {
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #2c0058;
+        }
+
+        .card-box ul {
+            margin-bottom: 0;
+            padding-left: 1.2rem;
+        }
+
+        .card-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #2c0058;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pink"> 
-            <div class="container"> 
-                <a class="navbar-brand" href="resources.html">Crown Yourself</a> 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
-                    <span class="navbar-toggler-icon"></span> 
-                </button> 
-                <div class="collapse navbar-collapse" id="navbarNav"> 
-                    <ul class="navbar-nav"> 
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="index.html">Home</a> 
-                        </li> 
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="about%20us.html">About</a> <!-- FIXED: space encoded as %20 -->
-                        </li>
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="feedback.html">Feedback</a> 
-                        </li>    
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="healing and empowerment.html">Healing & Empowerment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="resources.html">Resources</a>
-                        </li>
-                    </ul> 
-                </div> 
-            </div> 
-        </nav> 
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Crown Yourself</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="healing and empowerment.html">Healing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="page-section text-center">
-        <h2 class="section-title">Resources</h2>
-        <p class="mb-5">
-            Gentle tools to support your healing journey through reflection,
-            self‑awareness, and intentional self‑care.
-        </p>
 
-        <div class="card-box mb-4">
-            <h4>Journal Prompts</h4>
-            <ul class="list-unstyled mt-3">
-                <li>What does healing look like for me right now?</li>
-                <li>What parts of myself am I learning to accept?</li>
-                <li>When do I feel most at peace with myself?</li>
-                <li>What do I need more of in my life?</li>
-                <li>What does choosing myself mean today?</li>
-            </ul>
-        </div>
-        
-        <div class="card-box">
-            <h4>Self‑Care Tips</h4>
-            <ul class="list-unstyled mt-3">
-                <li>Take intentional breaks without guilt.</li>
-                <li>Fuel your body with rest, water, and nourishment.</li>
-                <li>Practice gratitude, even for small moments.</li>
-                <li>Set boundaries that protect your peace.</li>
-                <li>Speak kindly to yourself — your inner voice matters.</li>
-            </ul>
+    <main class="page-section">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <p class="intro-text">
+                Gentle tools to support your healing journey through reflection,
+                self-awareness, and intentional self-care.
+            </p>
+
+            <div class="card-box">
+                <h4>Journal Prompts</h4>
+                <ul>
+                    <li>What does healing look like for me right now?</li>
+                    <li>What parts of myself am I learning to accept?</li>
+                    <li>When do I feel most at peace with myself?</li>
+                    <li>What do I need more of in my life?</li>
+                    <li>What does choosing myself mean today?</li>
+                </ul>
+            </div>
+
+            <div class="card-box">
+                <h4>Self-Care Tips</h4>
+                <ul>
+                    <li>Take intentional breaks without guilt.</li>
+                    <li>Fuel your body with rest, water, and nourishment.</li>
+                    <li>Practice gratitude, even for small moments.</li>
+                    <li>Set boundaries that protect your peace.</li>
+                    <li>Speak kindly to yourself — your inner voice matters.</li>
+                </ul>
+            </div>
         </div>
     </main>
+
     <footer>
-        <p>&copy;2026 CROWN YOURSELF. All rights reserved</p>
+        <p>&copy; 2026 Crown Yourself. All rights reserved.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>  
-</body>       
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
